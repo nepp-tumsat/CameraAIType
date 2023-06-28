@@ -1,7 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
+// import './App.css';
 import './Home.css';
 import rogofin from './rogofin.png';
+// import logo from './logo.svg';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         </a>
       </h1>
     </header>
-    <div class="plus"><a href="#" class="btn1">+</a></div>
+    <div className="plus"><Link to="/Enter/" className="btn1">+</Link></div>
+    {/* <div class="plus"><a href="#" class="btn1">+</a></div> */}
     <div class="test"><a href="#" class="btn">単語帳1</a></div>
     <div class="test"><a href="#" class="btn">単語帳2</a></div>
     <div class="test"><a href="#" class="btn">単語帳3</a></div>
