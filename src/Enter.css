@@ -42,5 +42,9 @@ a.batsu1:hover{
     padding: 10px 0px 0px 1100px;
 }
 .form{
-    padding: 30px 0px 0px 70px;
+    padding: 30px 0px 0px 200px;
+}
+.btn-area{
+    text-align: center;
+    padding: 10px 20px;
 }
