@@ -16,7 +16,8 @@ function App() {
     </header>
     <div className="plus"><Link to="/Enter/" className="btn1">+</Link></div>
     {/* <div class="plus"><a href="#" class="btn1">+</a></div> */}
-    <div class="test"><a href="#" class="btn">単語帳1</a></div>
+    <div className="test"><Link to="/Display/" className="btn">単語帳1</Link></div>
+    {/* <div class="test"><a href="#" class="btn">単語帳1</a></div> */}
     <div class="test"><a href="#" class="btn">単語帳2</a></div>
     <div class="test"><a href="#" class="btn">単語帳3</a></div>
     <div class="test"><a href="#" class="btn">単語帳4</a></div>
