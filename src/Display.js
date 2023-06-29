@@ -15,9 +15,10 @@ const Display = () => {
   <div class="btn">
       <div className="batsu"><Link to="/" className="batsu1">×</Link></div>
   </div>
-  <div class="form">
-      <p>Display</p>
-  </div>
+  <div class="nandb">
+        <a href="#" class="triangle-left"></a>
+        <a href="#" class="triangle-right"></a>
+  </div> 
     </>
   );
 };

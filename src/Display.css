@@ -1,1 +1,49 @@
 /* 3 */
+@charset "UTF-8";
+.headline{
+    margin-left: 100px;
+}
+header{
+    background-color: #97cdf3;
+}
+body{
+    margin: 0px;
+}
+h1{
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+header.a{
+    display: block;
+    width: 192px;
+    height: 72px;
+    padding-bottom: 0px;
+}
+.triangle-right{
+    border-style: solid;
+    border-width: 20px 0 20px 90px;
+    border-color: transparent transparent transparent #128c8e;
+    display: inline-block;
+    width: 0;
+    height: 0;
+}
+.triangle-left{
+    border-style: solid;
+    border-width: 20px 90px 20px 0;
+    border-color: transparent #128c8e transparent transparent;
+    display: inline-block;
+    width: 0;
+    height: 0;
+}
+.triangle-left:hover{
+    opacity: 0.9;
+}
+.nandb{
+    padding: 450px 0px 10px 270px;
+}
+.triangle-right{
+    margin-left: 500px;
+}
+.triangle-right:hover{
+    opacity: 0.9;
+}
