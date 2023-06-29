@@ -1,4 +1,4 @@
-/* 2 */
+/* 4 */
 @charset "UTF-8";
 .headline{
     margin-left: 100px;
@@ -19,7 +19,7 @@ header.a{
     height: 72px;
     padding-bottom: 0px;
 }
-a.btn1{
+a.batsu1{
     color: #999;
     font-size: 25px;
     font-weight: bold;
@@ -33,32 +33,18 @@ a.btn1{
     text-decoration: none;
     transition: .2s;
 }
-a.btn1:hover{
+a.batsu1:hover{
     background: #333;
     border-color: #333;
     color: #FFF;
 }
-.plus{
+.btn{
     padding: 10px 0px 0px 1100px;
 }
-a.btn{
-    color: #fff;
-    font-size: 25px;
-    font-weight: bold;
-    background: #70769d;
-    border-radius: 4px;
-    box-shadow: 0px 0px 0px 5px #70769d;
-    border: dashed 1px #fff;
-    padding: 15px 20px;
-    text-decoration: none;
+.form{
+    padding: 30px 0px 0px 200px;
 }
-a.btn:hover{
-    opacity: 0.92;
-}
-.test{
-    display: inline-block;
-    padding: 100px;
-}
-.voca{
-    padding: 10px 0px 0px 100px;
+.btn-area{
+    text-align: center;
+    padding: 10px 20px;
 }
