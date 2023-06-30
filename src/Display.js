@@ -13,7 +13,7 @@ const Display = () => {
             </Link>
         </h1>
       </header>
-      <div class="btn">
+      <div class="left">
         <div className="hidari"><Link to="/" className="hidari1">←</Link></div>
       </div>
       <div class="tango">

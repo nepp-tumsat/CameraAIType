@@ -12,7 +12,7 @@ const Enter = () => {
             </Link>
         </h1>
     </header>
-    <div class="btn">
+    <div class="no">
         <div className="batsu"><Link to="/" className="batsu1">×</Link></div>
     </div>
     <div class="form">

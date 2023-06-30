@@ -4,6 +4,7 @@
     margin-left: 100px;
     height: 71.68px;
     width: 100%;
+    background-color: #97cdf3;
 }
 header{
     background-color: #97cdf3;
@@ -49,11 +50,11 @@ a.hidari1:hover{
     border-color: #3b82c4;
     color: #FFF;
 }
-/* .btn{
+.left{
     margin-left: 10%;
     margin-top: 2%;
     margin-bottom: -20px;
-} */
+}
 .tango{
     text-align: center;
     font-size: 2vw;
