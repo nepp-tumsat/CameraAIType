@@ -20,7 +20,6 @@ const Enter = () => {
     })
     setTextWord("");
 }
-console.log(setTextWord);
     return (
       <>
         <header>
@@ -36,9 +35,15 @@ console.log(setTextWord);
     <div class="form">
         <form  method="post">
         <div class="center">
-        <p>2.単語帳を選択してください</p>
-            
-                <select 
+                
+        </div>
+            <p>1.英単語を入力してください</p>
+            <input 
+            value={textWord}
+            onChange={(e)=>setTextWord(e.target.value)}
+            type="text" name="vocabulary" placeholder="単語を入力してください"></input>
+            <p>2.単語帳を選択してください</p>
+            <select 
                 value={selectedCollection}
                 onChange={(e)=>setSelectedCollection(e.target.value)}
                 name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
@@ -49,16 +54,8 @@ console.log(setTextWord);
                     <option value="word5">単語帳5</option>
                     <option value="word6">単語帳6</option>
                 </select>
-        </div>
-            <p>1.英単語を入力してください</p>
-            <input 
-            value={textWord}
-            onChange={(e)=>setTextWord(e.target.value)}
-            type="text" name="vocabulary" placeholder="単語を入力してください"></input>
-            
             <div class="btn-area">
                 <button onClick={sendData} type="submit">送信する</button>
-                
             </div>
         </form>
     </div>
