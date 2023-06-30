@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import rogofin from '../rogofin.png';
-
+import "./Displays.css"
 import { useState,useEffect } from "react";
 import { query, orderBy, onSnapshot ,collection} from 'firebase/firestore';
 import Slider from 'react-slick';
@@ -48,7 +48,7 @@ const Display = () => {
   <div class="btn">
       <div className="batsu"><Link to="/" className="batsu1">×</Link></div>
   </div>
- 
+ <div className="Slider">
   <Slider {...settings}>
   {register.map((word)=>(
     <div key={word.text}>
@@ -57,7 +57,7 @@ const Display = () => {
     </div>
   ))}
   </Slider> 
-  
+  </div>
 
     </>
   );
