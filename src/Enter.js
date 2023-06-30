@@ -9,6 +9,7 @@ import db from "./firebase"
 const Enter = () => {
 
     const [textWord, setTextWord] = useState("");
+    const [japaneseWord, setJapaneseWord] = useState("");
     const [selectedCollection,setSelectedCollection] =useState("word1");
     const [imageUrl,setImageUrl]=useState("")
 
@@ -48,9 +49,11 @@ const Enter = () => {
                 verified: true,
                 text: textWord,
                 timestamp: serverTimestamp(),
-                image :imageUrl
+                image :imageUrl,
+                japanese: japaneseWord
               })
               setTextWord("");
+              setJapaneseWord("");
         }catch(error){
             console.log(error)
         }
@@ -79,7 +82,15 @@ const Enter = () => {
             onChange={(e)=>setTextWord(e.target.value)}
             
             type="text" name="vocabulary" placeholder="単語を入力してください"></input>
-            <p>2.単語帳を選択してください</p>
+
+            <p>2.日本語訳を入力してください</p>
+            <input 
+            value={japaneseWord}
+            onChange={(e)=>setJapaneseWord(e.target.value)}
+            
+            type="text" name="vocabulary" placeholder="日本語訳を入力してください"></input>
+
+            <p>3.単語帳を選択してください</p>
             <select 
                 value={selectedCollection}
                 onChange={(e)=>setSelectedCollection(e.target.value)}
