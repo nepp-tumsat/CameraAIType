@@ -16,6 +16,10 @@ const Display = () => {
     setIsClicked(!isClicked);
   };
 
+  const handleBeforeChange = (oldIndex, newIndex) => {
+    console.log(`Slider will change from slide ${oldIndex} to slide ${newIndex}`);
+    setIsClicked(false);  // Reset the isClicked state to false
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,8 +33,6 @@ const Display = () => {
 
     fetchData();
   }, []);
-
-
 
   const settings = {
     dots: true,
@@ -54,16 +56,19 @@ const Display = () => {
       <div className="batsu"><Link to="/" className="batsu1">×</Link></div>
   </div>
  
-  <Slider {...settings}>
-  {register.map((word)=>(
-    <div key={word.text} className="slider-content">
-      <img src={word.image} alt="storageからの画像"/>
-        <p onClick={handleTextClick}>
-            {isClicked ? "日本語訳" : word.text}
-        </p>
-    </div>
-  ))}
-</Slider> 
+  <Slider 
+      {...settings}
+      beforeChange={handleBeforeChange}
+    >
+      {register.map((word) => (
+        <div key={word.text} className="slider-content">
+          <img src={word.image} alt="storageからの画像"/>
+          <p onClick={handleTextClick}>
+            {isClicked ? word.japanese : word.text}
+          </p>
+        </div>
+      ))}
+    </Slider>
     </>
   );
 };
