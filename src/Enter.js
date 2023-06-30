@@ -3,14 +3,15 @@ import rogofin from './rogofin.png';
 import './Enter.css';
 import { addDoc,collection,serverTimestamp } from "firebase/firestore";
 import React from "react";
-import{ useState } from "react";
+import{ useState, useEffect } from "react";
 import db from "./firebase"
 
 const Enter = () => {
 
     const [textWord, setTextWord] = useState("");
-    const [selectedCollection,setSelectedCollection] =useState("word1");
+    const [selectedCollection,setSelectedCollection] =useState("word2");
     const [imageUrl,setImageUrl]=useState("")
+    const [isSaved, setIsSaved] = useState(false);
 
     const sendData =async(e)=>{
            e.preventDefault();
@@ -30,19 +31,17 @@ const Enter = () => {
           const data = await response.json();
           const image = data.data[0].url;
           setImageUrl(image);
-          await saveDataToFirebase()
           console.log(image)
-          setTextWord("");
-          
         } catch(error){
             console.log(error)
         }
-
-   
-  
-
-
     }
+
+    useEffect(() => {
+        if (imageUrl) {
+            saveDataToFirebase();
+        }
+    }, [imageUrl]);
     
     const saveDataToFirebase = async ()=>{
         try{
@@ -52,11 +51,18 @@ const Enter = () => {
                 timestamp: serverTimestamp(),
                 image :imageUrl
               })
-
         }catch(error){
             console.log(error)
         }
       }
+
+      useEffect(() => {
+        if (isSaved) {
+            setTextWord("");
+            setIsSaved(false);
+        }
+    }, [isSaved]);
+    
     return (
       <>
         <header>

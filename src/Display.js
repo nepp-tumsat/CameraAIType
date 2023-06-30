@@ -14,7 +14,7 @@ const Display = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const wordData = collection(db, 'word1');
+      const wordData = collection(db, 'word2');
       const q = query(wordData, orderBy('timestamp', 'desc'));
 
       onSnapshot(q, (querySnapshot) => {
