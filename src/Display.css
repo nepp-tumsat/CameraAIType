@@ -21,6 +21,34 @@ header.a{
     height: 72px;
     padding-bottom: 0px;
 }
+a.hidari1{
+    color: #999;
+    font-size: 25px;
+    font-weight: bold;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    display: block;
+    text-decoration: none;
+    transition: .2s;
+}
+a.hidari1:hover{
+    background: #3b82c4;
+    border-color: #3b82c4;
+    color: #FFF;
+}
+.btn{
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: -20px;
+}
+.tango{
+    text-align: center;
+    font-size: 2vw;
+}
 .triangle-right{
     border-style: solid;
     border-width: 20px 0 20px 90px;
