@@ -10,7 +10,12 @@ import db from "../firebase";
 const Display = () => {
 
   const [register,setRegister]=useState([]);
-  
+    const [isInverted, setIsInverted] = useState(false);
+
+  const handleImageClick = () => {
+    console.log("タップされました")
+    setIsInverted(!isInverted);
+  };
 
   useEffect(() => {
     const fetchData = async () => {

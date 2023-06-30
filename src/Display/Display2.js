@@ -10,7 +10,12 @@ import db from "../firebase";
 const Display = () => {
 
   const [register,setRegister]=useState([]);
-  
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleTextClick = () => {
+    setIsClicked(!isClicked);
+  };
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,14 +56,14 @@ const Display = () => {
  
   <Slider {...settings}>
   {register.map((word)=>(
-    <div key={word.text}>
-        <p>{word.text}</p>
-        <img src={word.image} alt="storageからの画像"/>
+    <div key={word.text} className="slider-content">
+      <img src={word.image} alt="storageからの画像"/>
+        <p onClick={handleTextClick}>
+            {isClicked ? "日本語訳" : word.text}
+        </p>
     </div>
   ))}
-  </Slider> 
-  
-
+</Slider> 
     </>
   );
 };
