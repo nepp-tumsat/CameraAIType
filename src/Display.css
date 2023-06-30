@@ -21,6 +21,10 @@ header.a{
     height: 72px;
     padding-bottom: 0px;
 }
+.tango{
+    text-align: center;
+    font-size: 2vw;
+}
 .triangle-right{
     border-style: solid;
     border-width: 20px 0 20px 90px;
