@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import rogofin from './rogofin.png';
+import apple from './apple.jpg';
 import './Enter.css';
 
 const Enter = () => {
@@ -30,13 +31,22 @@ const Enter = () => {
                     <option value="6">単語帳6</option>
                 </select>
             </div>
-            <div class="btn-area">
+            {/* <div class="btn-area">
                 <button type="submit">送信する</button>
-            </div>
+            </div> */}
         </form>
+        <label class="open" for="popup"><span>送信する</span></label>
+        <input type="checkbox" id="popup"></input>
+        <div class="overlay">
+            <div class="window">
+                <label class="close" for="popup">×</label>
+                <img src= {apple} alt="apple"/>
+                <p class="text">"Apple"<br/>を追加しました!</p>
+            </div>
+        </div>
     </div>
       </>
     );
  };
-  
+
   export default Enter;

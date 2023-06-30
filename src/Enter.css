@@ -52,3 +52,75 @@ a.batsu1:hover{
     text-align: center;
     padding: 10px 20px;
 }
+p{
+    font-size: 20px;
+}
+.open{
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 45%;
+}
+#popup{
+    display: none;
+}
+label{
+    display:block;
+}
+label span{
+    display:block;
+    background-color:#01b6ed;
+    color:#fff;
+    width:200px;
+    line-height:40px;
+    border-radius:4px;
+    text-align:center;
+}
+label span:hover{
+    cursor:pointer;
+}
+.overlay{
+    display: none;
+}
+#popup:checked + .overlay{
+    display: block;
+    background-color: #00000070;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.window{
+    width: 90vw;
+    max-width: 380px;
+    height: 20vw;
+    background-color: #01b6ed;
+    border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+.window img{
+    width: 50%;
+    padding: 15px;
+}
+.text {
+	font-size: 25px;
+	margin: 0;
+	color: #fcfff9;
+    text-align: center;
+}
+.close {
+    color: #fff;
+	cursor:pointer;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	font-size: 20px;
+}
