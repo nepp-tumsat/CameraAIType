@@ -6,16 +6,15 @@ import { query, orderBy, onSnapshot ,collection} from 'firebase/firestore';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import firebaseExports from "./firebase";
-import { getStorage,ref,getDownloadURL } from "@firebase/storage";
-
+import db from "./firebase";
 const Display = () => {
 
   const [register,setRegister]=useState([]);
-  const [imageUrl , setImageUrl]=useState("");
+  
+
   useEffect(() => {
     const fetchData = async () => {
-      const wordData = collection(firebaseExports.db, 'word1');
+      const wordData = collection(db, 'word1');
       const q = query(wordData, orderBy('timestamp', 'desc'));
 
       onSnapshot(q, (querySnapshot) => {
@@ -27,18 +26,6 @@ const Display = () => {
   }, []);
 
 
-  useEffect(() => {
-    const storage = getStorage();
-    const storageRef = ref(storage, "gs://camera-ai-type.appspot.com/apple.png");
-
-    getDownloadURL(storageRef)
-      .then((url) => {
-        setImageUrl(url);
-      })
-      .catch((error) => {
-        console.log("画像の取得に失敗しました", error);
-      });
-  }, []);
 
   const settings = {
     dots: true,
@@ -66,7 +53,7 @@ const Display = () => {
   {register.map((word)=>(
     <div key={word.text}>
         <p>{word.text}</p>
-        <img src={imageUrl} alt="storageからの画像"/>
+        <img src={word.image} alt="storageからの画像"/>
     </div>
   ))}
   </Slider> 

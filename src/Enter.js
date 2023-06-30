@@ -5,21 +5,58 @@ import { addDoc,collection,serverTimestamp } from "firebase/firestore";
 import React from "react";
 import{ useState } from "react";
 import db from "./firebase"
+
 const Enter = () => {
 
     const [textWord, setTextWord] = useState("");
     const [selectedCollection,setSelectedCollection] =useState("word1");
+    const [imageUrl,setImageUrl]=useState("")
+
+    const sendData =async(e)=>{
+           e.preventDefault();
+           try{
+           const response = await fetch("https://api.openai.com/v1/images/generations", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: process.env.REACT_APP_OPENAI, // 実際の API キーに置き換えてください
+            },
+            body: JSON.stringify({
+              prompt: textWord,
+              size: "256x256",
+            }),
+          });
+    
+          const data = await response.json();
+          const image = data.data[0].url;
+          setImageUrl(image);
+          await saveDataToFirebase()
+          console.log(image)
+          setTextWord("");
+          
+        } catch(error){
+            console.log(error)
+        }
+
+   
+  
 
 
-    const sendData =(e)=>{
-        e.preventDefault();
-    addDoc(collection(db, selectedCollection), {
-      verified: true,
-      text: textWord,
-      timestamp: serverTimestamp(),
-    })
-    setTextWord("");
-}
+    }
+    
+    const saveDataToFirebase = async ()=>{
+        try{
+            await addDoc(collection(db, selectedCollection), {
+                verified: true,
+                text: textWord,
+                timestamp: serverTimestamp(),
+                image :imageUrl
+              })
+
+        }catch(error){
+            console.log(error)
+        }
+      }
     return (
       <>
         <header>
@@ -41,6 +78,7 @@ const Enter = () => {
             <input 
             value={textWord}
             onChange={(e)=>setTextWord(e.target.value)}
+            
             type="text" name="vocabulary" placeholder="単語を入力してください"></input>
             <p>2.単語帳を選択してください</p>
             <select 
