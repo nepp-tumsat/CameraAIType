@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import rogofin from './rogofin.png';
-import './Display.css';
+import rogofin from '../rogofin.png';
+
 import { useState,useEffect } from "react";
 import { query, orderBy, onSnapshot ,collection} from 'firebase/firestore';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import db from "./firebase";
+import db from "../firebase";
 const Display = () => {
 
   const [register,setRegister]=useState([]);
@@ -14,7 +14,7 @@ const Display = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const wordData = collection(db, 'word2');
+      const wordData = collection(db, 'word5');
       const q = query(wordData, orderBy('timestamp', 'desc'));
 
       onSnapshot(q, (querySnapshot) => {

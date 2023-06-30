@@ -9,7 +9,7 @@ import db from "./firebase"
 const Enter = () => {
 
     const [textWord, setTextWord] = useState("");
-    const [selectedCollection,setSelectedCollection] =useState("word2");
+    const [selectedCollection,setSelectedCollection] =useState("word1");
     const [imageUrl,setImageUrl]=useState("")
 
     const sendData =async(e)=>{
