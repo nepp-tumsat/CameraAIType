@@ -11,7 +11,6 @@ const Enter = () => {
     const [textWord, setTextWord] = useState("");
     const [selectedCollection,setSelectedCollection] =useState("word2");
     const [imageUrl,setImageUrl]=useState("")
-    const [isSaved, setIsSaved] = useState(false);
 
     const sendData =async(e)=>{
            e.preventDefault();
@@ -51,17 +50,11 @@ const Enter = () => {
                 timestamp: serverTimestamp(),
                 image :imageUrl
               })
+              setTextWord("");
         }catch(error){
             console.log(error)
         }
       }
-
-      useEffect(() => {
-        if (isSaved) {
-            setTextWord("");
-            setIsSaved(false);
-        }
-    }, [isSaved]);
     
     return (
       <>
