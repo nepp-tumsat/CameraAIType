@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import rogofin from '../rogofin.png';
 
-import { useState,useEffect } from "react";
+import { useState,useEffect ,useRef} from "react";
 import { query, orderBy, onSnapshot ,collection} from 'firebase/firestore';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
@@ -11,6 +11,7 @@ const Display = () => {
 
   const [register,setRegister]=useState([]);
   const [isClicked, setIsClicked] = useState(false);
+  const sliderRef = useRef();
 
   const handleTextClick = () => {
     setIsClicked(!isClicked);
@@ -43,6 +44,13 @@ const Display = () => {
     
   };
 
+  const next =()=>{
+    sliderRef.current.slickNext();
+  }
+  const previous =()=>{
+    sliderRef.current.slickPrev();
+  }
+
   return (
     <>
       <header>
@@ -57,7 +65,7 @@ const Display = () => {
   </div>
  
   <Slider 
-      {...settings}
+      ref={sliderRef}{...settings}
       beforeChange={handleBeforeChange}
     >
       {register.map((word) => (
@@ -69,6 +77,16 @@ const Display = () => {
         </div>
       ))}
     </Slider>
+    <div style={{ textAlign: "center" }}>
+        <br></br>
+        <br></br>
+          <button className="button" onClick={previous}>
+            ←
+          </button>
+          <button className="button" onClick={next}>
+            →
+          </button>
+    </div>
     </>
   );
 };
