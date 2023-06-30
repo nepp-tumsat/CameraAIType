@@ -2,6 +2,8 @@
 @charset "UTF-8";
 .headline{
     margin-left: 100px;
+    height: 71.68px;
+    width: 100%;
 }
 header{
     background-color: #97cdf3;
