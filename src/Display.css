@@ -7,6 +7,7 @@
 }
 header{
     background-color: #97cdf3;
+    width: 100%;
 }
 body{
     margin: 0px;
@@ -15,12 +16,44 @@ h1{
     margin-block-start: 0px;
     margin-block-end: 0px;
 }
-header.a{
+/* header.a{
     display: block;
     width: 192px;
     height: 72px;
     padding-bottom: 0px;
+} */
+header.a{
+    display: block;
 }
+.atag{
+    display:inline-block;
+    width: 192px;
+    height: 71.68px
+}
+a.hidari1{
+    color: #999;
+    font-size: 25px;
+    font-weight: bold;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    display: block;
+    text-decoration: none;
+    transition: .2s;
+}
+a.hidari1:hover{
+    background: #3b82c4;
+    border-color: #3b82c4;
+    color: #FFF;
+}
+/* .btn{
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: -20px;
+} */
 .tango{
     text-align: center;
     font-size: 2vw;
