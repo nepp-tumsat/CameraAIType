@@ -32,7 +32,7 @@ const Enter = () => {
            const response = await fetch("https://api.openai.com/v1/images/generations", {
             method: "POST",
             headers: {
-              "Content-Type": "application/jso",
+              "Content-Type": "application/json",
               Authorization: process.env.REACT_APP_OPENAI, // 実際の API キーに置き換えてください
             },
             body: JSON.stringify({
@@ -119,6 +119,7 @@ const Enter = () => {
         </form>
         <label className="open" onClick={sendData}><span>送信する</span></label>
         
+        {/* 一旦ポップアップは非表示 */}
         {/* <input type="checkbox" id="popup"></input>
         <div class="overlay">
             <div class="window">
