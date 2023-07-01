@@ -1,0 +1,26 @@
+div.Slider{
+    align-self: center;
+    background-color: aqua;
+}
+
+.inverted {
+    filter: invert(1);
+  }
+
+  .orange-background {
+    background-color: orange;
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .slider-content img {
+    max-width: 100%; /* This ensures the image does not overflow its container */
+    object-fit: contain; /* This ensures the image maintains its aspect ratio */
+    margin-left: 630px;
+  }
