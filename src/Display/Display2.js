@@ -80,12 +80,8 @@ const Display = () => {
     <div style={{ textAlign: "center" }}>
         <br></br>
         <br></br>
-          <button className="button" onClick={previous}>
-            ←
-          </button>
-          <button className="button" onClick={next}>
-            →
-          </button>
+          <button className="hidarisankaku" onClick={previous}></button>
+          <button className="migisankaku" onClick={next}></button>
     </div>
     </>
   );
