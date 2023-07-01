@@ -16,11 +16,23 @@ const Enter = () => {
 
     const sendData =async(e)=>{
            e.preventDefault();
+
+            if (!textWord) {
+                console.log("からです")
+                alert("英単語を入力してください");
+                return;
+            }
+
+            if (!japaneseWord) {
+                alert("日本語訳を入力してください");
+                return;
+            }
+
            try{
            const response = await fetch("https://api.openai.com/v1/images/generations", {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+              "Content-Type": "application/jso",
               Authorization: process.env.REACT_APP_OPENAI, // 実際の API キーに置き換えてください
             },
             body: JSON.stringify({
@@ -104,16 +116,16 @@ const Enter = () => {
                     <option value="word6">単語帳6</option>
                 </select>
         </form>
-        <label className="open" htmlFor="popup" onClick={sendData}><span>送信する</span></label>
-
-        <input type="checkbox" id="popup"></input>
+        <label className="open" onClick={sendData}><span>送信する</span></label>
+        
+        {/* <input type="checkbox" id="popup"></input>
         <div class="overlay">
             <div class="window">
                 <label class="close" for="popup">×</label>
                 <img src= {apple} alt="apple"/>
                 <p class="text">"Apple"<br/>を追加しました!</p>
             </div>
-        </div>
+        </div> */}
     </div>
       </>
     );
