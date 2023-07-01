@@ -18,8 +18,7 @@ const Enter = () => {
     const [isDisabled,setIsDisabled]=useState(false)
     const sendData =async(e)=>{
            e.preventDefault();
-           setIsDisabled(true)
-           setIsLoading(true)
+           
            
             if (!textWord) {
                 console.log("からです")
@@ -31,6 +30,9 @@ const Enter = () => {
                 alert("日本語訳を入力してください");
                 return;
             }
+
+            setIsDisabled(true)
+           setIsLoading(true)
 
            try{
            const response = await fetch("https://api.openai.com/v1/images/generations", {
