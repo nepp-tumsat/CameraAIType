@@ -70,7 +70,7 @@ const Display = () => {
     >
       {register.map((word) => (
         <div key={word.text} className="slider-content">
-          <img src={word.image} alt="storageからの画像"/>
+          <img src={word.image} alt="画像が読み込めません"/>
           <p onClick={handleTextClick}>
             {isClicked ? word.japanese : word.text}
           </p>

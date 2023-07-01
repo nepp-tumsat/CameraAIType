@@ -103,11 +103,9 @@ const Enter = () => {
                     <option value="word5">単語帳5</option>
                     <option value="word6">単語帳6</option>
                 </select>
-            <div class="btn-area">
-                <button onClick={sendData} type="submit">送信する</button>
-            </div>
         </form>
-        <label class="open" for="popup"><span>送信する</span></label>
+        <label className="open" htmlFor="popup" onClick={sendData}><span>送信する</span></label>
+
         <input type="checkbox" id="popup"></input>
         <div class="overlay">
             <div class="window">
