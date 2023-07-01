@@ -47,6 +47,7 @@ const Enter = () => {
           console.log(image)
         } catch(error){
             console.log(error)
+            alert("通信エラーです")
         }
     }
 
