@@ -48,12 +48,33 @@ a.batsu1:hover{
 .form{
     padding: 30px 0px 0px 200px;
 }
-.btn-area{
+/* .btn-area{
     text-align: center;
     padding: 10px 20px;
+} */
+.circle{
+    background: #99CCFF;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
 }
-p{
-    font-size: 20px;
+.one{
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+}
+.formtext{
+    font-size: 1.7vw;
+}
+input{
+    margin-left: 10%;
+}
+.center{
+    margin-left: 10%;
 }
 .open{
     display: inline-block;
@@ -68,7 +89,7 @@ label{
 }
 label span{
     display:block;
-    background-color:#01b6ed;
+    background-color:#0764E5;
     color:#fff;
     width:200px;
     line-height:40px;

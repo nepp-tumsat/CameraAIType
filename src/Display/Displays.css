@@ -22,7 +22,7 @@ div.Slider{
     /* margin-left: 630px; */
     /* text-align: center; */
   }
-/* 以下変更 */
+/* 以下矢印 */
 .hidarisankaku {
   border-style: solid;
   border-width: 20px 90px 20px 0px;
@@ -45,4 +45,25 @@ div.Slider{
 }
 .migisankaku:hover{
   opacity: 0.85;
+}
+/* 以下単語 */
+.box-020 {
+  font-size: 3vw;
+  font-weight: bold;
+  position: relative;
+  max-width: 20%;
+  margin: 0 auto;
+  padding: 0.5em 1.0em;
+  background-color: #E0EFFF;
+  color: #333;
+}
+.box-020::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 20px 20px 0;
+  border-style: solid;
+  border-color: #C0CFDF #fff;
+  box-shadow: -1px 1px 1px rgb(0 0 0 / 5%);
+  content: '';
 }
