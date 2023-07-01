@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import rogofin from './rogofin.png';
+import apple from './apple.jpg';
 import './Enter.css';
 import { addDoc,collection,serverTimestamp } from "firebase/firestore";
 import React from "react";
@@ -15,6 +16,18 @@ const Enter = () => {
 
     const sendData =async(e)=>{
            e.preventDefault();
+
+            if (!textWord) {
+                console.log("からです")
+                alert("英単語を入力してください");
+                return;
+            }
+
+            if (!japaneseWord) {
+                alert("日本語訳を入力してください");
+                return;
+            }
+
            try{
            const response = await fetch("https://api.openai.com/v1/images/generations", {
             method: "POST",
@@ -34,6 +47,7 @@ const Enter = () => {
           console.log(image)
         } catch(error){
             console.log(error)
+            alert("通信エラーです")
         }
     }
 
@@ -68,7 +82,7 @@ const Enter = () => {
             </Link>
         </h1>
     </header>
-    <div class="btn">
+    <div class="no">
         <div className="batsu"><Link to="/" className="batsu1">×</Link></div>
     </div>
     <div class="form">
@@ -102,13 +116,21 @@ const Enter = () => {
                     <option value="word5">単語帳5</option>
                     <option value="word6">単語帳6</option>
                 </select>
-            <div class="btn-area">
-                <button onClick={sendData} type="submit">送信する</button>
-            </div>
         </form>
+        <label className="open" onClick={sendData}><span>送信する</span></label>
+        
+        {/* 一旦ポップアップは非表示 */}
+        {/* <input type="checkbox" id="popup"></input>
+        <div class="overlay">
+            <div class="window">
+                <label class="close" for="popup">×</label>
+                <img src= {apple} alt="apple"/>
+                <p class="text">"Apple"<br/>を追加しました!</p>
+            </div>
+        </div> */}
     </div>
       </>
     );
  };
-  
+
   export default Enter;

@@ -58,7 +58,7 @@ const Display = () => {
   {register.map((word)=>(
     <div key={word.text}>
         <p>{word.text}</p>
-        <img src={word.image} alt="storageからの画像"/>
+        <img src={word.image} alt="画像が読み込めません"/>
     </div>
   ))}
   </Slider> 
