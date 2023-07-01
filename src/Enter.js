@@ -6,17 +6,21 @@ import { addDoc,collection,serverTimestamp } from "firebase/firestore";
 import React from "react";
 import{ useState, useEffect } from "react";
 import db from "./firebase"
+import ReactLoading from 'react-loading';
 
 const Enter = () => {
 
+    const [isLoading,setIsLoading]=useState(false)
     const [textWord, setTextWord] = useState("");
     const [japaneseWord, setJapaneseWord] = useState("");
     const [selectedCollection,setSelectedCollection] =useState("word1");
     const [imageUrl,setImageUrl]=useState("")
-
+    const [isDisabled,setIsDisabled]=useState(false)
     const sendData =async(e)=>{
            e.preventDefault();
-
+           setIsDisabled(true)
+           setIsLoading(true)
+           
             if (!textWord) {
                 console.log("からです")
                 alert("英単語を入力してください");
@@ -68,8 +72,12 @@ const Enter = () => {
               })
               setTextWord("");
               setJapaneseWord("");
+              setIsLoading(false)
+              setIsDisabled(false)
         }catch(error){
             console.log(error)
+            setIsLoading(false)
+            setIsDisabled(false)
         }
       }
     
@@ -98,10 +106,7 @@ const Enter = () => {
             onChange={(e)=>setTextWord(e.target.value)}
             
             type="text" name="vocabulary" placeholder="単語を入力してください"></input>
-
-            <div class="one">
-                <span class="circle">2</span><span class="formtext">日本語訳を入力してください</span>
-            </div>
+            <p>2.日本語訳を入力してください</p>
             <input 
             value={japaneseWord}
             onChange={(e)=>setJapaneseWord(e.target.value)}
@@ -123,7 +128,15 @@ const Enter = () => {
                     <option value="word6">単語帳6</option>
                 </select>
         </form>
-        <label className="open" onClick={sendData}><span>送信する</span></label>
+        
+        <label className={`open ${isDisabled ? 'disabled' : ''}`} 
+        onClick={(e) => {
+            if (!isDisabled) {
+                sendData(e);
+            }
+        }}
+       
+        ><span>送信する</span></label>
         
         {/* 一旦ポップアップは非表示 */}
         {/* <input type="checkbox" id="popup"></input>
@@ -134,6 +147,13 @@ const Enter = () => {
                 <p class="text">"Apple"<br/>を追加しました!</p>
             </div>
         </div> */}
+        {isLoading && (
+    <div className="modal">
+        <div className="modal-content">
+            <ReactLoading type={"spin"} color={"#0099FF"} height={70} width={100} />
+        </div>
+    </div>
+)}
     </div>
       </>
     );
