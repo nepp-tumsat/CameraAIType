@@ -2,9 +2,13 @@
 @charset "UTF-8";
 .headline{
     margin-left: 100px;
+    height: 71.68px;
+    width: 100%;
+    background-color: #97cdf3;
 }
 header{
     background-color: #97cdf3;
+    width: 100%;
 }
 body{
     margin: 0px;
@@ -34,11 +38,11 @@ a.batsu1{
     transition: .2s;
 }
 a.batsu1:hover{
-    background: #333;
-    border-color: #333;
+    background: #3b82c4;
+    border-color: #3b82c4;
     color: #FFF;
 }
-.btn{
+.no{
     padding: 10px 0px 0px 1100px;
 }
 .form{
