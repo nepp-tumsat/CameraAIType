@@ -71,9 +71,10 @@ const Display = () => {
       {register.map((word) => (
         <div key={word.text} className="slider-content">
           <img src={word.image} alt="画像が読み込めません"/>
-          <p onClick={handleTextClick}>
+          <p onClick={handleTextClick}></p>
+          <div class="box-020" onClick={handleTextClick}>
             {isClicked ? word.japanese : word.text}
-          </p>
+          </div>
         </div>
       ))}
     </Slider>

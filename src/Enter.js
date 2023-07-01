@@ -90,21 +90,27 @@ const Enter = () => {
         <div class="center">
                 
         </div>
-            <p>1.英単語を入力してください</p>
+            <div class="one">
+                <span class="circle">1</span><span class="formtext">英単語を入力してください</span>
+            </div>
             <input 
             value={textWord}
             onChange={(e)=>setTextWord(e.target.value)}
             
             type="text" name="vocabulary" placeholder="単語を入力してください"></input>
 
-            <p>2.日本語訳を入力してください</p>
+            <div class="one">
+                <span class="circle">2</span><span class="formtext">日本語訳を入力してください</span>
+            </div>
             <input 
             value={japaneseWord}
             onChange={(e)=>setJapaneseWord(e.target.value)}
             
             type="text" name="vocabulary" placeholder="日本語訳を入力してください"></input>
 
-            <p>3.単語帳を選択してください</p>
+            <div class="one">
+                <span class="circle">3</span><span class="formtext">単語帳を選択してください</span>
+            </div>
             <select 
                 value={selectedCollection}
                 onChange={(e)=>setSelectedCollection(e.target.value)}
