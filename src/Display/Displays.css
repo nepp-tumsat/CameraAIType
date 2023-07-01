@@ -1,26 +1,48 @@
 div.Slider{
     align-self: center;
     background-color: aqua;
-}
-
+  }
 .inverted {
     filter: invert(1);
   }
-
-  .orange-background {
+.orange-background {
     background-color: orange;
   }
-
-  .slider-content {
+.slider-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-
-  .slider-content img {
+.slider-content img {
     max-width: 100%; /* This ensures the image does not overflow its container */
     object-fit: contain; /* This ensures the image maintains its aspect ratio */
-    margin-left: 630px;
+    margin: auto;
+    /* margin-left: 630px; */
+    /* text-align: center; */
   }
+/* 以下変更 */
+.hidarisankaku {
+  border-style: solid;
+  border-width: 20px 90px 20px 0px;
+  border-color: #FFF #128C8E #FFF #FFF;
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+.hidarisankaku:hover{
+  opacity: 0.85;
+}
+.migisankaku{
+  border-style: solid;
+  border-width: 20px 0px 20px 90px;
+  border-color: #FFF #FFF #FFF #128C8E;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 500px;
+}
+.migisankaku:hover{
+  opacity: 0.85;
+}
