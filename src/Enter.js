@@ -104,50 +104,50 @@ const Enter = () => {
                 <form method="post">
                     <div class="center">
 
-                    </div>
-                    <div class="one">
-                        <span class="circle">1</span><span class="formtext">英単語を入力してください</span>
-                    </div>
-                    <input
-                        value={textWord}
-                        onChange={(e) => setTextWord(e.target.value)}
+                </div>
+                <div class="one">
+                    <span class="circle">1</span><span class="formtext">英単語を入力してください</span>
+                </div>
+            <div class="cp_iptxt">
+                 <input 
+                 value={textWord}
+                 onChange={(e)=>setTextWord(e.target.value)}
+                 type="text" class="ef" name="vocabulary" placeholder=""></input>
+                 {/* <label>例）Apple</label> */}
+                 <span class="focus_line"></span>
+            </div>
 
-                        type="text" name="vocabulary" placeholder="単語を入力してください"></input>
-                    <p>2.日本語訳を入力してください</p>
-                    <input
-                        value={japaneseWord}
-                        onChange={(e) => setJapaneseWord(e.target.value)}
-
-                        type="text" name="vocabulary" placeholder="日本語訳を入力してください"></input>
-
-                    <div class="one">
-                        <span class="circle">3</span><span class="formtext">単語帳を選択してください</span>
-                    </div>
-                    <select
-                        value={selectedCollection}
-                        onChange={(e) => setSelectedCollection(e.target.value)}
-                        name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
-                        <option value="word1">単語帳1</option>
-                        <option value="word2">単語帳2</option>
-                        <option value="word3">単語帳3</option>
-                        <option value="word4">単語帳4</option>
-                        <option value="word5">単語帳5</option>
-                        <option value="word6">単語帳6</option>
-                    </select>
-                </form>
-
-                <label className={`open ${isDisabled ? 'disabled' : ''}`}
-                    onClick={(e) => {
-                        if (!isDisabled) {
-                            sendData(e);
-                        }
-                    }}
-
-                ><span>送信する</span></label>
-
-                {/* 一旦ポップアップは非表示 */}
-                <input type="checkbox" id="popup"></input>
-        {/* <div class="overlay">
+            <div class="one">
+                <span class="circle">2</span><span class="formtext">日本語訳を入力してください</span>
+            </div>
+            <div class="cp_iptxt">
+                 <input 
+                 value={japaneseWord}
+                 onChange={(e)=>setJapaneseWord(e.target.value)}
+                  type="text" class="ef" name="vocabulary" placeholder=""></input>
+                 {/* <label>例）りんご</label> */}
+                 <span class="focus_line"></span>
+            </div>
+            <div class="one">
+                <span class="circle">3</span><span class="formtext">単語帳を選択してください</span>
+            </div>
+            <select 
+                value={selectedCollection}
+                onChange={(e)=>setSelectedCollection(e.target.value)}
+                name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
+                    <option value="word1">単語帳1</option>
+                    <option value="word2">単語帳2</option>
+                    <option value="word3">単語帳3</option>
+                    <option value="word4">単語帳4</option>
+                    <option value="word5">単語帳5</option>
+                    <option value="word6">単語帳6</option>
+                </select>
+        </form>
+        <label className="open" onClick={sendData}><span>送信する</span></label>
+        
+        {/* 一旦ポップアップは非表示 */}
+        {/* <input type="checkbox" id="popup"></input>
+        <div class="overlay">
             <div class="window">
                 <label class="close" for="popup">×</label>
                 <img src= {apple} alt="apple"/>
