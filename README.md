@@ -1,6 +1,6 @@
 # Camera AI Type
 
-<img width="400" alt="image" src="https://github.com/nepp-tumsat/CameraAIType/assets/83959618/3c273bbb-74fc-4697-9fac-41f351fdda80">
+<img width="400" alt="image" src="https://github.com/nepp-tumsat/CameraAIType/assets/83959618/391e8ca3-ae75-4431-b592-7c1e9f229fb6">
 
 サポーターズVol.5ハッカソンで作ったAI英単語帳アプリ  
 (2023.0701~0702)
