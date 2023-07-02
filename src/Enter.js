@@ -113,7 +113,7 @@ const Enter = () => {
                  value={textWord}
                  onChange={(e)=>setTextWord(e.target.value)}
                  type="text" class="ef" name="vocabulary" placeholder=""></input>
-                 <label>例）Apple</label>
+                 {/* <label>例）Apple</label> */}
                  <span class="focus_line"></span>
             </div>
 
@@ -125,7 +125,7 @@ const Enter = () => {
                  value={japaneseWord}
                  onChange={(e)=>setJapaneseWord(e.target.value)}
                   type="text" class="ef" name="vocabulary" placeholder=""></input>
-                 <label>例）りんご</label>
+                 {/* <label>例）りんご</label> */}
                  <span class="focus_line"></span>
             </div>
             <div class="one">

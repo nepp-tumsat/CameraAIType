@@ -75,7 +75,7 @@ a.batsu1:hover{
     box-sizing: border-box;
     width: 100%;
     letter-spacing: 1px;
-    padding-left: 4em;
+    /* padding-left: 4em; */
 }
 .cp_iptxt input[type='text']:focus {
     outline: none;
