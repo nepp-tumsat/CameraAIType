@@ -68,6 +68,7 @@ a.batsu1:hover{
     position: relative;
     width: 40%;
     margin: 40px 3%;
+    border-bottom: 0.5px solid #AAAAAA;
 }
 .cp_iptxt input[type='text'] {
     font: 15px/24px sans-serif;
@@ -82,7 +83,7 @@ a.batsu1:hover{
 .ef {
     padding: 4px 0;
     border: 0;
-    border-bottom: 1px solid #FFF;
+    /* border-bottom: 1px solid #1b2538; */
     background-color: transparent;
 }
 .ef ~ .focus_line {
