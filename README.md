@@ -1,4 +1,11 @@
-# サポーターズVol.5ハッカソンで作ったAI英単語帳アプリ
+# Camera AI Type
+サポーターズVol.5ハッカソンで作ったAI英単語帳アプリ  
+(2023.0701~0702)
+
+## ※Firebase、OpenAIのAPIKeyが無いと動きません
+
+## 開発期間
+ハッカソンキックオフから開発を始め、1週間ほど
 
 ## 使用技術
 - HTML/CSS
@@ -22,6 +29,7 @@
 - [mana05-125](https://github.com/mana05-125) デザイン(Figma, Canva), フロント(HTML/CSS)
 
 ## 開発環境
+- デプロイはせず、ローカル環境にて開発
 - メンバー間で使用環境が違うため、npmとyarnが混在
 - PRベースの開発（ブランチ名は特に指定せず、コミットメッセージは日本語でわかりやすく）
 
@@ -64,6 +72,36 @@ REACT_APP_appId = "appId"
 
 REACT_APP_OPENAI ="Bearer OpenAIAPIKey"
 ```
+
+### DALL-Eについて
+以下のような形で画像生成を利用できます
+```
+curl --location 'https://api.openai.com/v1/images/generations' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer APIKey' \
+--data '{
+    "prompt": "English Word",
+    "n": 1,
+    "size": "256x256"
+}'
+```
+レスポンスは5秒ほどで返ってきます（本アプリの条件下）
+```
+{
+  "created": UnixTime,
+  "data": [
+    {
+      "url": "ImageUrl"
+    }
+  ]
+}
+```
+
+ImageUrlの画像について、生成から1時間ほどでリンク切れになる
+
+## 反省点
+- DALL-Eで取得した画像をFirebase Storageに保存しようとしたところ、CORSエラーになり、保存できなかった。→サーバーの勉強が必要
+- エラーハンドリングが不十分
 
 
 ### 成果発表で利用したスライド
