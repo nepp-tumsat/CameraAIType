@@ -1,8 +1,15 @@
 # Camera AI Type
+
+<img width="400" alt="image" src="https://github.com/nepp-tumsat/CameraAIType/assets/83959618/3c273bbb-74fc-4697-9fac-41f351fdda80">
+
 サポーターズVol.5ハッカソンで作ったAI英単語帳アプリ  
 (2023.0701~0702)
 
-## ※Firebase、OpenAIのAPIKeyが無いと動きません
+### ※Firebase、OpenAIのAPIKeyが無いと動きません
+
+## こだわりポイント
+- OpenAIの画像生成AIを利用することにより、印象に残りやすい画像を生成し、英単語と結び付けられる
+- 統一感のあるデザイン、アプリアイコン
 
 ## 開発期間
 ハッカソンキックオフから開発を始め、1週間ほど
