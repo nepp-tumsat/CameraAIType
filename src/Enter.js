@@ -16,6 +16,8 @@ const Enter = () => {
     const [selectedCollection, setSelectedCollection] = useState("word1");
     const [imageUrl, setImageUrl] = useState("")
     const [isDisabled, setIsDisabled] = useState(false)
+    const [popUpImage,setPopUpImage] = useState(false)
+    const [displayTextWord, setDisplayTextWord] = useState("");
     const sendData = async (e) => {
         e.preventDefault();
 
@@ -32,7 +34,7 @@ const Enter = () => {
 
         setIsDisabled(true)
         setIsLoading(true)
-
+       
         try {
             const response = await fetch("https://api.openai.com/v1/images/generations", {
                 method: "POST",
@@ -71,16 +73,20 @@ const Enter = () => {
                 image: imageUrl,
                 japanese: japaneseWord
             })
+            setDisplayTextWord(textWord)
             setTextWord("");
             setJapaneseWord("");
-            setIsLoading(false)
+                setIsLoading(false)
             setIsDisabled(false)
+            setPopUpImage(true)/**popupはでる */
+            
         } catch (error) {
             console.log(error)
             setIsLoading(false)
             setIsDisabled(false)
         }
     }
+    
 
     return (
         <>
@@ -140,8 +146,8 @@ const Enter = () => {
                 ><span>送信する</span></label>
 
                 {/* 一旦ポップアップは非表示 */}
-                {/* <input type="checkbox" id="popup"></input>
-        <div class="overlay">
+                <input type="checkbox" id="popup"></input>
+        {/* <div class="overlay">
             <div class="window">
                 <label class="close" for="popup">×</label>
                 <img src= {apple} alt="apple"/>
@@ -149,11 +155,22 @@ const Enter = () => {
             </div>
         </div> */}
                 {isLoading && (
-                    <div className="modal">
-                        <div className="modal-content">
+                    <div className="modal1">
+                        <div className="modal-content1">
                             <ReactLoading type={"spin"} color={"#0099FF"} height={70} width={100} />
                         </div>
                     </div>
+                )}
+                {popUpImage && (
+                    <div className="modal2">
+                    <div className="modal-content2">
+                    <div className="popup-content">
+                    <button onClick={()=>setPopUpImage(false)} className="closebutton">×</button>
+                        <img src={imageUrl} alt="AI画像をpopup" className="popupimage"/>
+                        <p className="popuptext">"{displayTextWord}"を追加しました!</p>
+                       </div>
+                    </div>
+                </div>
                 )}
             </div>
         </>
