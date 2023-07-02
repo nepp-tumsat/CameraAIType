@@ -13,6 +13,12 @@
 - Sourcetree
 - Figma
 
+## チーム構成
+- [Mayachiu](https://github.com/Mayachiu) PM, フロント, バックエンド(API, Firebase)
+- [hashimo000](https://github.com/hashimo000) フロント, バックエンド(Firebase)
+- [R-lilac](https://github.com/R-lilac) フロント
+- [mana05-125](https://github.com/mana05-125) デザイン(Figma)
+
 成果発表で利用したスライド
 
 https://docs.google.com/presentation/d/1kMNadcgf8JEP3iSCMR5CO7vQGofNeZEWpe5XsKcyQcE/edit?usp=sharing
