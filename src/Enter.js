@@ -131,10 +131,11 @@ const Enter = () => {
             <div class="one">
                 <span class="circle">3</span><span class="formtext">単語帳を選択してください</span>
             </div>
-            <select 
+            <div class="center1">
+                <select 
                 value={selectedCollection}
                 onChange={(e)=>setSelectedCollection(e.target.value)}
-                name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
+                name="sources" id="sources" class="custom-select" placeholder="Source Type" required>
                     <option value="word1">単語帳1</option>
                     <option value="word2">単語帳2</option>
                     <option value="word3">単語帳3</option>
@@ -142,6 +143,7 @@ const Enter = () => {
                     <option value="word5">単語帳5</option>
                     <option value="word6">単語帳6</option>
                 </select>
+            </div>
         </form>
         <label className="open" onClick={sendData}><span>送信する</span></label>
         
