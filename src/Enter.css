@@ -222,7 +222,8 @@ label.disabled span {
     color: #0a0a0a;
 }
 .closebutton:hover{
-  background-color: #44e0d6;
+  background-color: #3b82c4;
+  color: #ffffff;
 }
 .popup-content {
     background-color: #ffffff; /* 白い背景 */

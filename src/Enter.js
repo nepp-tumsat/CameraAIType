@@ -165,7 +165,7 @@ const Enter = () => {
                     <div className="modal2">
                     <div className="modal-content2">
                     <div className="popup-content">
-                    <button onClick={()=>setPopUpImage(false)} className="closebutton">閉じる</button>
+                    <button onClick={()=>setPopUpImage(false)} className="closebutton">×</button>
                         <img src={imageUrl} alt="AI画像をpopup" className="popupimage"/>
                         <p className="popuptext">"{displayTextWord}"を追加しました!</p>
                        </div>
