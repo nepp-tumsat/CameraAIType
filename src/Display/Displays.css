@@ -56,6 +56,8 @@ div.Slider{
   padding: 0.5em 1.0em;
   background-color: #E0EFFF;
   color: #333;
+  width: 220px;  /* 適切な値に調整してください */
+  height: 40px; /* 適切な値に調整してください */
 }
 .box-020::after {
   position: absolute;
