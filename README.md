@@ -1,4 +1,17 @@
-サポーターズVol.5ハッカソンで作ったAI英単語帳アプリ
+# サポーターズVol.5ハッカソンで作ったAI英単語帳アプリ
+
+## 使用技術
+- HTML/CSS
+- JavaScript
+- React
+- Firebase
+- DALL-E(OpenAI画像生成API)
+
+## チーム開発で利用したツール
+- git
+- Github
+- Sourcetree
+- Figma
 
 成果発表で利用したスライド
 
