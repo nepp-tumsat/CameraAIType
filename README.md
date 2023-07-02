@@ -52,6 +52,20 @@ yarn start
 ```
 (必要なライブラリを適宜インストールしてください)
 
+## 環境変数
+プロジェクトファイル下に.envを作成し、以下の用に管理
+```
+REACT_APP_apiKey = "apiKey"
+REACT_APP_authDomain = "authDomain"
+REACT_APP_projectId = "projectId"
+REACT_APP_storageBucket = "storageBucket"
+REACT_APP_messagingSenderId = "messagingSenderId"
+REACT_APP_appId = "appId"
+
+REACT_APP_OPENAI ="Bearer OpenAIAPIKey"
+```
+
+
 ### 成果発表で利用したスライド
 
 https://docs.google.com/presentation/d/1kMNadcgf8JEP3iSCMR5CO7vQGofNeZEWpe5XsKcyQcE/edit?usp=sharing
