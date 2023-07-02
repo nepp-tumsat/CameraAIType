@@ -93,21 +93,26 @@ const Enter = () => {
             <div class="one">
                 <span class="circle">1</span><span class="formtext">英単語を入力してください</span>
             </div>
-            <input 
-            value={textWord}
-            onChange={(e)=>setTextWord(e.target.value)}
-            
-            type="text" name="vocabulary" placeholder="単語を入力してください"></input>
+            <div class="cp_iptxt">
+                 <input 
+                 value={textWord}
+                 onChange={(e)=>setTextWord(e.target.value)}
+                 type="text" class="ef" name="vocabulary" placeholder=""></input>
+                 <label>例）Apple</label>
+                 <span class="focus_line"></span>
+            </div>
 
             <div class="one">
                 <span class="circle">2</span><span class="formtext">日本語訳を入力してください</span>
             </div>
-            <input 
-            value={japaneseWord}
-            onChange={(e)=>setJapaneseWord(e.target.value)}
-            
-            type="text" name="vocabulary" placeholder="日本語訳を入力してください"></input>
-
+            <div class="cp_iptxt">
+                 <input 
+                 value={japaneseWord}
+                 onChange={(e)=>setJapaneseWord(e.target.value)}
+                  type="text" class="ef" name="vocabulary" placeholder=""></input>
+                 <label>例）りんご</label>
+                 <span class="focus_line"></span>
+            </div>
             <div class="one">
                 <span class="circle">3</span><span class="formtext">単語帳を選択してください</span>
             </div>
