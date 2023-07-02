@@ -30,7 +30,7 @@
 - Figma
 
 ## チーム構成
-- [Mayachiu](https://github.com/Mayachiu) PM, フロント(React), バックエンド(API, Firebase)
+- [Mayachiu](https://github.com/Mayachiu) マネジメント, フロント(React), バックエンド(API, Firebase)
 - [hashimo000](https://github.com/hashimo000) フロント(React), バックエンド(Firebase)
 - [R-lilac](https://github.com/R-lilac) フロント(React, HTML/CSS)
 - [mana05-125](https://github.com/mana05-125) デザイン(Figma, Canva), フロント(HTML/CSS)
