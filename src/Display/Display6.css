@@ -25,8 +25,8 @@ div.Slider6{
 /* 以下矢印 */
 .hidarisankaku6 {
   border-style: solid;
-  border-width: 20px 90px 20px 0px;
-  border-color: #FFF #128C8E #FFF #FFF;
+  border-width: 20px 70px 20px 0px;
+  border-color: #FFF #99CCFF #FFF #FFF;
   display: inline-block;
   width: 0;
   height: 0;
@@ -36,8 +36,8 @@ div.Slider6{
 }
 .migisankaku6{
   border-style: solid;
-  border-width: 20px 0px 20px 90px;
-  border-color: #FFF #FFF #FFF #128C8E;
+  border-width: 20px 0px 20px 70px;
+  border-color: #FFF #FFF #FFF #99CCFF;
   display: inline-block;
   width: 0;
   height: 0;
